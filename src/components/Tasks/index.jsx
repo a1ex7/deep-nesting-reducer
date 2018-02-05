@@ -5,7 +5,7 @@ import * as actions from './actions';
 export class Tasks extends React.Component {
 
   componentDidUpdate() {
-    console.log('UPDATED');
+    console.log('PROPS ARE UPDATED');
     // Здесь можем вызвать экшен, который запустит аякс запрос,
     // который возмёт уже изменённый фильтр и обновит страницу.
   }
@@ -25,6 +25,7 @@ export class Tasks extends React.Component {
   }
 
   render() {
+    console.log(this.props.state);
     const { items } = this.props.state.tasks;
     return (
       <div style={{ width: '30%', display: 'flex', flexFlow: 'column nowrap' }}>
